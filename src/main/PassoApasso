@@ -1,0 +1,11 @@
+1 - Configurar o application.properties
+    Inicialmente vamos em "src > main > resources" no application.properties para indicar a porta, que vai ser a padrão
+    8082. Agora precisamos indicar o endereço do Eureka, que colocamos também nos outros microsserviços com a propriedade
+    eureka.client.serviceUrl.defaultZone.
+    Incluiremos também a propriedade de nome e mais duas que vão, de fato, fazer e habilitar a descoberta.
+    Definimos que o discovery locator.enabled precisar estar como verdadeiro. Isso que vai fazer funcionar o processo
+    de descoberta, colocando essa propriedade como "true". E depois, estabelecemos "true" na propriedade lowerCaseServiceId
+    para que o nome das aplicações que vão ser usadas sejam em letra minúscula.
+
+
+2 - Incluir a anotação @EnableEurekaClient na classe principal.
